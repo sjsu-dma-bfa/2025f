@@ -2,8 +2,8 @@
 :root {
   --bg: #0e0f12;
   --panel: #14161b;
-  --text: #e9ebf0;
-  --muted: #a9b0bf;
+  --text: #e5f7ee;
+  --muted: #e9ebf0;
   --brand: #6aa6ff;
   --brand-strong: #3f86ff;
   --border: #242732;
@@ -112,8 +112,10 @@ body {
 }
 
 .hero-title {
+  font-family: basset-one, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: clamp(36px, 7.5vw, 96px);
-  font-weight: 800;
   letter-spacing: 4px;
   margin: 0 0 24px;
   grid-column: 2;
