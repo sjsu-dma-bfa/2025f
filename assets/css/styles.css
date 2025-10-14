@@ -7,6 +7,9 @@
   --brand: #6aa6ff;
   --brand-strong: #3f86ff;
   --border: #242732;
+  /* Violet gradient palette */
+  --violet-1: #6c33ff;   /* brighter violet top */
+  --violet-2: #3a1b5a;   /* deep purple mid */
 }
 
 * { box-sizing: border-box; }
@@ -17,8 +20,14 @@ body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text);
-  background: radial-gradient(1200px 800px at 80% -10%, #1c2030 0%, #0e0f12 60%) no-repeat,
-              var(--bg);
+  /* Layered gradient: subtle violet glow + vertical fade + bottom vignette */
+  background:
+    /* Responsive violet glow sized with percentages */
+    radial-gradient(80% 55% at 50% 0%, rgba(153, 86, 255, 0.30) 0%, rgba(153, 86, 255, 0) 60%),
+    /* Bottom vignette to avoid a hard-colored strip at the page end */
+    linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%),
+    /* Top (0%) to bottom (100%): black -> deep purple -> violet */
+    linear-gradient(180deg, #0b0c10 0%, #12131a 30%, var(--violet-2) 70%, var(--violet-1) 100%);
   line-height: 1.6;
 }
 
@@ -89,6 +98,39 @@ body {
 .subtitle { color: var(--muted); margin: 0 0 24px; }
 
 .hero-actions { display: flex; gap: 12px; }
+
+/* Landing hero overrides */
+.hero-landing {
+  padding: clamp(40px, 8vh, 100px) 0 40px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 1fr) 1fr;
+  grid-template-rows: auto auto auto;
+  row-gap: clamp(12px, 3vh, 24px);
+  align-items: center;
+  justify-items: center;
+}
+
+.hero-title {
+  font-size: clamp(36px, 7.5vw, 96px);
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin: 0 0 24px;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.hero-figure { margin: 0; grid-column: 2; grid-row: 2; }
+.hero-image {
+  width: clamp(220px, 38vw,480px);
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 8px 40px rgba(0,0,0,0.45));
+  height: auto;
+  max-width: 100%;
+}
+
+.hero-actions-center { justify-content: center; grid-column: 2; grid-row: 3; }
 
 .button {
   display: inline-block;
