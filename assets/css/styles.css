@@ -143,8 +143,25 @@ body {
 }
 
 .button.primary {
-  background: linear-gradient(180deg, var(--brand), var(--brand-strong));
-  border-color: transparent;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  border: 1px solid #6c33ff;
+  color: #e9ebf0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  box-shadow: 
+    0 0 20px rgba(108, 51, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.button.primary:hover {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
+  border-color: #8a5fff;
+  box-shadow: 
+    0 0 30px rgba(108, 51, 255, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
 }
 
 .quick-links { padding: 28px 0 56px; }
