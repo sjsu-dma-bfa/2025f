@@ -25,10 +25,14 @@ body {
     /* Responsive violet glow sized with percentages */
     radial-gradient(80% 55% at 50% 0%, rgba(153, 86, 255, 0.30) 0%, rgba(153, 86, 255, 0) 60%),
     /* Bottom vignette to avoid a hard-colored strip at the page end */
-    linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%),
+    linear-gradient(180deg, rgba(16, 16, 16, 0) 0%, rgba(15, 15, 15, 0.65) 100%),
     /* Top (0%) to bottom (100%): black -> deep purple -> violet */
     linear-gradient(180deg, #0b0c10 0%, #12131a 30%, var(--violet-2) 70%, var(--violet-1) 100%);
-  line-height: 1.6;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center top, center top, center top;
+    background-size: 100% 100%, 100% 100%, 100% 100%;
+    background-attachment: fixed, fixed, fixed; /* anchored to viewport */
+    /* line-height: 1.6; */
 }
 
 .container {
