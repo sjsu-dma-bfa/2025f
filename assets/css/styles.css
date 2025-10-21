@@ -54,18 +54,21 @@ body {
 }
 
 .brand {
+  font-family: "Major Mono Display", sans-serif;
   color: var(--text);
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 0.3px;
 }
 
 .site-nav a {
+  font-family: "Oxanium", sans-serif;
   color: var(--muted);
   text-decoration: none;
   margin-left: 18px;
   padding: 8px 10px;
   border-radius: 8px;
+  font-weight: 400;
 }
 
 .site-nav a:hover, .site-nav a.active {
@@ -112,7 +115,7 @@ body {
 }
 
 .hero-title {
-  font-family: basset-one, sans-serif;
+  font-family: "Major Mono Display", monospace;
   font-weight: 400;
   font-style: normal;
   font-size: clamp(36px, 7.5vw, 96px);
@@ -145,6 +148,7 @@ body {
 }
 
 .button.primary {
+  font-family: "Oxanium", sans-serif;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
   border: 1px solid #6c33ff;
   color: #e9ebf0;
