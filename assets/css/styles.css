@@ -297,6 +297,10 @@ canvas {
   margin: 15px;
 }
 
+.artist-page a{
+  color: rgb(0, 250, 0);
+}
+
 .carousel {
   background: black;
   margin: 40px 40px 80px;
