@@ -494,13 +494,22 @@ canvas {
   color: var(--muted);
 }
 
-.about-section img {
+.about-section > img {
   margin: 20px; 
   display: block; 
   float: right; 
   width: 25%;
   border-radius: 20px;
   box-shadow: 0px 0px 5px 5px rgb(255, 255, 255);
+}
+
+/* Ensure carousel images are not affected by about-section img styles */
+.carousel-cell img {
+  margin: 0 !important;
+  float: none !important;
+  width: auto !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 /* Accessibility helpers */
@@ -512,7 +521,7 @@ button:focus {
 
 /* Small screens */
 @media (max-width: 560px) {
-  .about-section img {
+  .about-section > img {
     width: 70%;
     float: none; 
   }
