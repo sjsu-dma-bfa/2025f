@@ -150,6 +150,10 @@ canvas {
   margin: 0 0 24px;
   grid-column: 2;
   grid-row: 1;
+  text-shadow:
+    1px 1px 0 #3a1b5a,
+    2px 2px 0 #535353,
+    4px 4px 12px rgba(196, 196, 196, 0.6);
 }
 
 .hero-figure {
